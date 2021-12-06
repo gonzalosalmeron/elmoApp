@@ -1,0 +1,7 @@
+{
+  "name": "elmoApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
