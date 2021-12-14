@@ -1,0 +1,87 @@
+<ion-content color="elmo-white" class="padding-horizontal-custom" [fullscreen]="true">
+  <div class="container">
+    <div id="header">
+      <div class="flex-start-center">
+
+        <!-- BACK BUTTON -->
+        <ion-buttons slot="start" class="ion-margin-top p-h-10">
+          <ion-back-button mode="md" color="elmo-gray" defaultHref="homepage"></ion-back-button>
+        </ion-buttons>
+        
+        <!-- TITLE -->
+        <div id="title" class="p-h-26">
+          <h1>Control your amount of expenses</h1>        
+        </div>
+        
+      </div>
+      <div class="flex-start-center">
+        <!-- MONTH SELECTOR -->
+        <div id="selectMonth" class="flex">    
+          <ion-item mode="ios">
+            <ion-select okText="Okay" [(ngModel)]="actualMonth" cancelText="Dismiss" (ionChange)="filterTransactionByDate()">
+              <ion-select-option value="all">All</ion-select-option>
+              <ion-select-option value="January">January</ion-select-option>
+              <ion-select-option value="February">February</ion-select-option>
+              <ion-select-option value="March">March</ion-select-option>
+              <ion-select-option value="April">April</ion-select-option>
+              <ion-select-option value="May">May</ion-select-option>
+              <ion-select-option value="June">June</ion-select-option>
+              <ion-select-option value="July">July</ion-select-option>
+              <ion-select-option value="August">August</ion-select-option>
+              <ion-select-option value="September">September</ion-select-option>
+              <ion-select-option value="October">October</ion-select-option>
+              <ion-select-option value="November">November</ion-select-option>
+              <ion-select-option value="December">December</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </div>
+
+        <!-- YEAR SELECTOR -->
+        <div id="selectMonth" class="flex">    
+          <ion-item mode="ios">
+            <ion-select [(ngModel)]="yearD" okText="Okay" cancelText="Dismiss" (ionChange)="filterTransactionByDate()">
+              <ion-select-option value="1">All</ion-select-option>
+              <ion-select-option value="{{year}}" *ngFor="let year of years">{{year}}</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </div>
+      </div>
+      
+      
+      <!-- <div><canvas id="canvas" width="400" height="400"></canvas></div> -->
+      
+      
+    </div>
+
+    <div id="expenses" class="p-h-26">
+      <ion-list color="white" mode="ios" class="ion-margin-top">
+        <!-- EMPTY CARD ONLY DISPLAYED WHEN NO TRANSACTIONS FOUND -->
+        <app-no-transactions-card id="noTransactionCard" class="ion-margin-bottom" *ngIf="transactions.length < 1"></app-no-transactions-card>
+
+        <ion-item-sliding class="ion-margin-bottom" *ngFor="let transaction of transactions">
+          <!-- TRANSACTION CARD -->
+          <app-transactions-card [icon]="transaction.icon" [topic]="transaction.topic" [date]="transaction.date"  [amount]="transaction.amount"></app-transactions-card>
+          
+          <ion-item-options side="start">
+
+            <!-- EDIT OPTION -->
+            <ion-item-option *ngIf="transaction.amount < 0" color="elmo-black" (click)="goEditTransaction(transaction.id)">
+              <ion-icon name="create-outline"></ion-icon>
+            </ion-item-option>
+            <!-- OPTION DELETE -->
+            <ion-item-option color="elmo-blue-gray" (click)="callDeleteTransaction(transaction)">
+              <ion-icon name="trash-outline"></ion-icon>
+            </ion-item-option>
+
+          </ion-item-options>
+
+        </ion-item-sliding>
+      </ion-list>
+      
+    </div>
+
+    <!-- go edit transaction button -->
+    <app-add-button-black (click)="goEditTransaction(undefined)"></app-add-button-black>
+
+  </div>
+</ion-content>

@@ -1,6 +1,6 @@
 {
-	"appId": "io.ionic.starter",
-	"appName": "elmoApp",
-	"webDir": "www",
-	"bundledWebRuntime": false
+  "appId": "io.ionic.elmoapp",
+  "appName": "ElmoApp",
+  "webDir": "www",
+  "bundledWebRuntime": false
 }

@@ -1,0 +1,18 @@
+<ion-item>
+  <!-- TRANSACTION ICON -->
+  <ion-avatar slot="start">
+    <ion-icon name="{{ icon }}"></ion-icon>
+  </ion-avatar>
+
+  <!-- TRANSACTION INFO -->
+  <ion-label id="transactionInfo">
+    <h3>{{ topic }}</h3>
+    <h4>{{ date | date: "dd/MM/yy" }}</h4>
+  </ion-label>
+
+  <!-- TRANSACTION AMOUNT MONEY -->
+  <ion-label id="transactionAmountMoney" slot="end" class="ion-text- ion-text-right" [ngStyle]="{'color': amount < 0 ? '#DC5656' : '#80b38a'}">
+    <h4>{{ amount }} €</h4>
+  </ion-label>
+  
+</ion-item>

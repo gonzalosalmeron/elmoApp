@@ -1,0 +1,35 @@
+ion-item {
+    --background: white;
+    --border-color: transparent;
+    --color: #232C33;
+    border-radius: 14px;
+    
+    ion-avatar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        background-color: var(--ion-color-elmo-black);
+        color: white;
+        margin-right: 15px;
+        --border-radius: 10px
+        
+    }
+}
+
+#transactionInfo {
+
+    h3 {
+        font-family: rubik-medium;
+    }
+
+    h4 {
+        font-family: rubik-regular;
+    }
+}
+
+#transactionAmountMoney > h4 {
+    max-width: 55px;
+    font-family: rubik-medium;
+    
+}

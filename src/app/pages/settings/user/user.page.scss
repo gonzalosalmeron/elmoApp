@@ -1,0 +1,76 @@
+// TITLE
+#title h1 {
+    font-family: rubik-bold;
+    color: var(--ion-color-elmo-black);
+    font-size: 20px;
+    margin-top: 5px;
+}
+// USER EDIT CONTAINER
+#userEditContainer {
+    margin-top: 30px;
+}
+// INPUT BOX
+
+img {
+    margin: 0 !important;
+}
+
+ion-img {
+    margin: 0 !important;
+}
+
+#inputBox {
+    background-color: var(--ion-color-elmo-purple-shade);
+    border-radius: 16px;
+    padding: 16px 10px;
+
+    #userIcon {
+        position: relative;
+        max-width: 65px !important;
+        min-width: 65px !important;
+        min-height: 65px !important;
+        max-height: 65px !important;
+        width: 65px !important;
+        height: 65px !important;
+        overflow: hidden;
+        
+        ion-img::part(image) {
+            margin: 0 !important;
+            width: 65px !important;
+            height: 65px !important;
+            border-radius: 100%;
+            object-fit: cover;
+        }
+
+        ion-badge {
+            width: 20px;
+            height: 20px;
+            min-width: 20px;
+            min-height: 20px;
+            border-radius: 100%;
+            opacity: 70%;
+            padding: 0;
+            margin-left: -20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 13px;
+        }
+    }
+
+    ion-button {
+        width: 100px;
+    }
+
+    ion-input {
+        --background: #F6F7FD;
+        --padding-top: 10px;
+        --padding-bottom: 10px;
+        --padding-start: 18px;
+        --padding-end: 18px;
+        border-radius: 100px;
+        --color: #394853;
+        font-family: rubik-medium;
+        margin-bottom: 10px;
+    }
+}

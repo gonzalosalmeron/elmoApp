@@ -1,0 +1,38 @@
+<ion-content color="elmo-white" class="padding-horizontal-custom" [fullscreen]="true">
+  <div class="container">
+    <div>
+      <!-- BACK BUTTON -->
+      <div class="p-h-10">
+        <ion-buttons slot="start" class="ion-margin-top">
+          <ion-back-button mode="md" (click)="modalController.dismiss()" defaultHref="" color="elmo-gray"></ion-back-button>
+        </ion-buttons>
+      </div>
+      <!-- TITLE -->
+      <div class="p-h-26">
+        <div id="addMoneyTitle">
+          <h1>Add money to<br> your account<br> </h1>
+          <p class="rubik-regular">Your avaible balance is <span class="rubik-medium">{{balanceService.getBalance() | async}} €</span></p>
+        </div>
+        <!-- BALANCE -->
+        <div id="balanceBox" class="ion-padding-top">
+
+          <!-- MONEY INPUT-->
+          <div id="moneyInputBox" color="primary">
+            <ion-input id="moneyInput" min="0" type="number" [(ngModel)]="balance" placeholder="0"></ion-input>
+            <h1>€</h1>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="p-h-26" >
+      <ion-button (click)="callSaveBalanceAndTransaction()" expand="block" color="elmo-black" mode="ios" class="ion-margin-bottom">
+        Add to account
+      </ion-button>
+    </div>
+
+  </div>
+</ion-content>
+

@@ -1,0 +1,27 @@
+// ADD BUTTON
+.add {
+    background-color: #AAB5EC;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+}
+
+.line {
+    background-color: #F8F8F8;
+    width: 6px;
+    height: 25px;
+    border-radius: 10px;
+    position: absolute;
+}
+
+.line2 {
+    background-color: #F8F8F8;
+    width: 6px;
+    height: 25px;
+    border-radius: 10px;
+    position: absolute;
+    transform: rotate(90deg);
+}

@@ -1,0 +1,217 @@
+// CUSTOM CSS
+
+.padding-horizontal-custom {
+    padding: 0 26px;
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    color: #F8F8F8;
+}
+
+.padding-0 {
+    padding: 0;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+* ::-webkit-scrollbar {
+    display: none;
+}
+
+// WELCOME CONTAINER
+#userProfile {
+    margin-top: 20px;
+    margin-right: 5px;
+}
+
+ion-img::part(image) {
+    margin: 0 !important;
+    width: 65px !important;
+    height: 65px !important;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+#welcomeNameBox {
+    text-align: left;
+    margin-top: 60px;
+}
+
+#welcomeNameBox > h1 {
+    font-family: rubik-bold;
+    color: #232C33;
+}
+
+#welcomeNameBox > p {
+    font-family: rubik-medium;
+    font-size: 15px;
+    margin-top: 10px;
+    color: #232C33;
+}
+
+// BALANCE BOX
+
+#balanceBox {
+    background-color: #DADFF7;
+    width: 100%;
+    padding: 14px 14px 18px 20px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+    align-items: center;
+    margin-bottom: 25px;
+    -webkit-box-shadow: 0px 2px 13px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 13px -5px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 13px -5px rgba(0,0,0,0.75);
+}
+
+#balanceBox > div > p {
+    margin: 0 0 5px 0;
+    font-family: rubik-medium;
+    color: #626060;
+}
+
+#currentMoney {
+    margin: 0 0 0 0;
+    font-size: 26px;
+    font-family: rubik-medium;
+    font-weight: 600;
+    color: #232C33;
+}
+
+
+// HORIZONTAL SCROLL
+
+#horizontalScrollContainer {
+    padding-left: 26px;
+}
+
+ion-segment-button {
+    --background: #C1B2B2;
+    --indicator-box-shadow: transparent!important;
+    --indicator-color : transparent;
+    --background-checked: #C1B2B2;
+    margin-right: 10px;
+    text-align: left;
+    text-overflow: ellipsis;
+    max-width: 90px;
+    color: #232C33;
+    height: 105px;
+    
+
+    div {
+        padding-top: 20px;
+        text-overflow: ellipsis;
+        width: 70px;
+
+        h3 {
+            margin-top: 10px;
+            margin-bottom: 0px;
+            font-family: rubik-medium;
+        }
+
+        p {
+            margin-top: 5px;
+            margin-bottom: 10px;
+            font-family: rubik-medium;
+            max-width: 200px;
+            width: auto;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+    }
+}
+
+// TRANSACTIONS
+#transactionsTitleAdd > h4 {
+    font-family: rubik-medium;
+    color: #232C33;
+    font-size: 15px;
+}
+
+#transactionsTitleAdd > p {
+    font-family: rubik-medium;
+    font-weight: 200;
+    color: #626060;
+    font-size: 15px;
+}
+
+#transactionsBox {
+    margin-bottom: 20px;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 0px 9px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 9px -5px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 9px -5px rgba(0,0,0,0.75);
+
+    ion-list {
+        border-radius: 20px;
+        border: 0 solid transparent;
+        background-color: transparent;
+        
+        
+        
+        ion-item {
+            --background: white;
+            --border-color: transparent;
+            --color: #232C33;
+            color: #232C33;
+
+            ion-avatar {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 24px;
+                background-color: #4F5D75;
+                color: white;
+                margin-right: 15px;
+                --border-radius: 10px;
+            }
+        }
+    }
+}
+
+ion-list {
+    border: 0 solid transparent;
+    background-color: white;
+    border-radius: 14px;
+    -webkit-box-shadow: 0px 0px 15px -10px #000000; 
+    box-shadow: 0px 0px 15px -10px #000000;
+
+    ion-item {
+        border: 0 solid transparent;
+        background-color: white;
+        border-radius: 14px;
+
+        ion-item-options {
+            --border-color: transparent;
+        }
+    }
+}
+
+
+
+#transactionAmountMoney {
+
+    h2 {
+        font-family: rubik-bold;
+    }
+
+    h4 {
+        width: 49px;
+        overflow:hidden;
+        text-overflow:ellipsis;
+        padding: 0;
+    }
+}
+
+// FOOTER
+ion-footer {
+    background-color: var(--ion-color-elmo-white);
+}
+

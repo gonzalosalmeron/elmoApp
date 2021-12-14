@@ -1,0 +1,42 @@
+<ion-content color="elmo-white">
+  <div class="container">
+    <div>
+      <!-- BACK BUTTON -->
+      <div class="p-h-10 ion-margin-top">
+        <ion-buttons slot="start">
+          <ion-back-button defaultHref="homepage" color="elmo-gray" mode="md"></ion-back-button>
+        </ion-buttons>
+      </div>
+
+      <!-- TITLE -->
+      <div id="title" class="p-h-26">
+        <h1>Update your profile</h1>
+      </div>
+    </div>
+    
+    <div id="userEditContainer" class="p-h-26">
+
+      <div id="inputBox" class="flex-col-center">
+
+        <!-- USER PHOTO -->
+        <div id="userIcon" class="flex-center ion-margin-bottom" (click)="addPhotoPopover($event)">
+          <ion-img *ngIf="photoService.photo.webviewPath == ''" src="../../../assets/icon/user-icon.png"></ion-img>
+          <ion-img *ngIf="photoService.photo.webviewPath != ''" src="{{photoService.photo.webviewPath}}"></ion-img>
+          <ion-badge color="elmo-black"><ion-icon name="pencil"></ion-icon></ion-badge>
+        </div>
+
+        <!-- INPUTS -->
+        <ion-input type="text" placeholder="testUser" clearInput inputmode="text" mode="ios"></ion-input>
+        <ion-input type="text" placeholder="Test User" clearInput inputmode="text" mode="ios"></ion-input>
+        <ion-input type="email" placeholder="testuser@test.com" clearInput inputmode="text" mode="ios" class="ion-margin-bottom"></ion-input>
+
+        <ion-button color="elmo-purple" shape="round" mode="ios">
+          <p>Save</p>
+        </ion-button>
+      </div>
+      
+    </div>
+
+
+  </div>
+</ion-content>

@@ -1,0 +1,4 @@
+<ion-list>
+  <ion-list-header>Actual balance</ion-list-header>
+  <ion-item>{{ balanceService.getBalance() | async }} €  <ion-icon slot="end" name="cash-outline"></ion-icon></ion-item>
+</ion-list>

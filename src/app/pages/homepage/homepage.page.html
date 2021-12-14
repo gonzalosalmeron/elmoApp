@@ -1,0 +1,95 @@
+<ion-content color="elmo-white" class="padding-horizontal-custom" [fullscreen]="true">
+  <div class="container" >
+
+    <!-- USER PROFILE ICON AND WELCOME -->
+    <div class="padding-horizontal-custom">
+      <!-- USER ICON -->
+      <ion-fab id="userProfile" horizontal="end" vertical="top" slot="fixed">
+        <ion-fab-button color="elmo-purple">
+          <ion-img *ngIf="photoService.photo.webviewPath == ''" src="../../../assets/icon/user-icon.png"></ion-img>
+          <ion-img *ngIf="photoService.photo.webviewPath != ''" src="{{photoService.photo.webviewPath}}"></ion-img>
+        </ion-fab-button>
+        <ion-fab-list>
+          <ion-fab-button color="light" (click)="goUserSettings()">
+            <ion-icon name="settings-outline" ></ion-icon>
+          </ion-fab-button>
+          <ion-fab-button color="light" (click)="logout()">
+            <ion-icon name="log-out-outline" ></ion-icon>
+          </ion-fab-button>
+        </ion-fab-list>
+      </ion-fab>
+      <!-- USERNAME IS DISPLAYED HERE -->
+      <div id="welcomeNameBox">
+        <h1>Hi<br>Gonzalo,</h1>
+        <p>These are your budgets</p>
+      </div>
+      
+      <!-- BALANCE -->
+      <div id="balanceBox">
+
+        <!-- AVAIABLE BALANCE -->
+        <div>
+          <p>Avaiable balance</p>
+          <h1 id="currentMoney">{{balanceService.getBalance() | async}} €</h1>
+        </div>
+
+        <!-- ADD MONEY BUTTON -->
+        <app-add-button (click)="openDepositModal()"></app-add-button>
+      </div>
+
+    </div>
+
+    
+
+    <!-- HORIZONTAL SCROLL -->
+    <div id="horizontalScrollContainer" class="ion-margin-top">
+      <ion-grid fixed class="padding-0 ion-margin-top" >
+        <ion-row>
+          <ion-col class="padding-0">
+  
+            <!-- BUDGETS -->
+            <ion-segment scrollable="true" mode="md">
+              <ion-segment-button mode="ios" *ngIf="budgetsService.getBudgetsLenght() < 1">
+                <div>
+                  <h3>¿¿?? €</h3>
+                  <p>No budgets</p>
+                </div>
+              </ion-segment-button>
+              <ion-segment-button mode="ios" *ngFor="let budget of budgetsService.getBudgets() | async">
+                <div>
+                  <h3>{{budget.amount}} €</h3>
+                  <p>{{budget.title}}</p>
+                </div>
+              </ion-segment-button>
+  
+            </ion-segment>
+          </ion-col>
+  
+        </ion-row>
+      </ion-grid>
+    </div>
+
+    <!-- RECENT TRANSACTIONS -->
+    <div class="padding-horizontal-custom">
+      <div id="transactionsTitleAdd" class="flex-between">
+        <h4>Recent transactions</h4>
+        <p (click)="goEditTransaction()">Add +</p>
+      </div>
+
+      <div id="expenses" class="ion-margin-bottom">
+        <ion-list color="white" mode="ios" class="ion-margin-top">
+          <!-- EMPTY CARD ONLY DISPLAYED WHEN NO TRANSACTIONS FOUND -->
+          <app-no-transactions-card *ngIf="transactionsService.getTransactionsLenght() < 1" ></app-no-transactions-card>
+          <!-- TRANSACTION CARD -->
+          <app-transactions-card [icon]="transaction.icon" [topic]="transaction.topic" [date]="transaction.date"  [amount]="transaction.amount" *ngFor="let transaction of transactionsService.get5LastTransactions() | async"></app-transactions-card>
+        </ion-list>
+      
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+<!-- ION FOOTER -->
+<ion-footer mode="ios">
+  <app-footer-toolbar></app-footer-toolbar>
+</ion-footer>

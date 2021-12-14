@@ -234,3 +234,173 @@
     --ion-card-background: #1e1e1e;
   }
 }
+
+/*
+   * CUSTOM ELMO PALETTE
+   * -------------------------------------------
+   */
+
+:root {
+
+  // ELMO PURPLE #AAB5EC
+  --ion-color-elmo-purple: #AAB5EC;
+  --ion-color-elmo-purple-rgb: 170,181,236;
+  --ion-color-elmo-purple-contrast: #000000;
+  --ion-color-elmo-purple-contrast-rgb: 0,0,0;
+  --ion-color-elmo-purple-shade: #969fd0;
+  --ion-color-elmo-purple-tint: #b3bcee;
+
+  // ELMO PURPLE SHADE #DADFF7
+  --ion-color-elmo-purple-shade: #DADFF7;
+  --ion-color-elmo-purple-shade-rgb: 218,223,247;
+  --ion-color-elmo-purple-shade-contrast: #000000;
+  --ion-color-elmo-purple-shade-contrast-rgb: 0,0,0;
+  --ion-color-elmo-purple-shade-shade: #c0c4d9;
+  --ion-color-elmo-purple-shade-tint: #dee2f8;
+
+  // ELMO BLACK #232C33
+  --ion-color-elmo-black: #232C33;
+  --ion-color-elmo-black-rgb: 35,44,51;
+  --ion-color-elmo-black-contrast: #ffffff;
+  --ion-color-elmo-black-contrast-rgb: 255,255,255;
+  --ion-color-elmo-black-shade: #1f272d;
+  --ion-color-elmo-black-tint: #394147;
+
+  // ELMO PURE BLACK #212629
+  --ion-color-elmo-pure-black: #212629;
+	--ion-color-elmo-pure-black-rgb: 33,38,41;
+	--ion-color-elmo-pure-black-contrast: #ffffff;
+	--ion-color-elmo-pure-black-contrast-rgb: 255,255,255;
+	--ion-color-elmo-pure-black-shade: #1d2124;
+	--ion-color-elmo-pure-black-tint: #373c3e;
+
+  // ELMO WHITE #F8F8F8
+  --ion-color-elmo-white: #F8F8F8;
+  --ion-color-elmo-white-rgb: 248,248,248;
+  --ion-color-elmo-white-contrast: #000000;
+  --ion-color-elmo-white-contrast-rgb: 0,0,0;
+  --ion-color-elmo-white-shade: #dadada;
+  --ion-color-elmo-white-tint: #f9f9f9;
+
+  // ELMO BLUE #A0C1D1
+  --ion-color-elmo-blue: #A0C1D1;
+  --ion-color-elmo-blue-rgb: 160,193,209;
+  --ion-color-elmo-blue-contrast: #000000;
+  --ion-color-elmo-blue-contrast-rgb: 0,0,0;
+  --ion-color-elmo-blue-shade: #8daab8;
+  --ion-color-elmo-blue-tint: #aac7d6;
+
+  // ELMO BLUE LIGHT #E7EFF3
+  --ion-color-elmo-blue-light: #E7EFF3;
+  --ion-color-elmo-blue-light-rgb: 231,239,243;
+  --ion-color-elmo-blue-light-contrast: #000000;
+  --ion-color-elmo-blue-light-contrast-rgb: 0,0,0;
+  --ion-color-elmo-blue-light-shade: #cbd2d6;
+  --ion-color-elmo-blue-light-tint: #e9f1f4;
+
+  // ELMO BLUE DARK #4F5D75
+  --ion-color-elmo-blue-dark: #4F5D75;
+  --ion-color-elmo-blue-dark-rgb: 79,93,117;
+  --ion-color-elmo-blue-dark-contrast: #ffffff;
+  --ion-color-elmo-blue-dark-contrast-rgb: 255,255,255;
+  --ion-color-elmo-blue-dark-shade: #465267;
+  --ion-color-elmo-blue-dark-tint: #616d83;
+
+  // ELMO GRAY #9B9B9B
+  --ion-color-elmo-gray: #9B9B9B;
+  --ion-color-elmo-gray-rgb: 155,155,155;
+  --ion-color-elmo-gray-contrast: #000000;
+  --ion-color-elmo-gray-contrast-rgb: 0,0,0;
+  --ion-color-elmo-gray-shade: #888888;
+  --ion-color-elmo-gray-tint: #a5a5a5;
+}
+
+// ELMO PURPLE
+.ion-color-elmo-purple {
+  --ion-color-base: var(--ion-color-elmo-purple);
+  --ion-color-base-rgb: var(--ion-color-elmo-purple-rgb);
+  --ion-color-contrast: var(--ion-color-elmo-purple-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-elmo-purple-contrast-rgb);
+  --ion-color-shade: var(--ion-color-elmo-purple-shade);
+  --ion-color-tint: var(--ion-color-elmo-purple-tint);
+}
+
+// ELMO PURPLE SHADE
+.ion-color-elmo-purple-shade-shade {
+  --ion-color-base: var(--ion-color-elmo-purple-shade);
+  --ion-color-base-rgb: var(--ion-color-elmo-purple-shade-rgb);
+  --ion-color-contrast: var(--ion-color-elmo-purple-shade-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-elmo-purple-shade-contrast-rgb);
+  --ion-color-shade: var(--ion-color-elmo-purple-shade-shade);
+  --ion-color-tint: var(--ion-color-elmo-purple-shade-tint);
+}
+
+// ELMO BLACK
+.ion-color-elmo-black {
+  --ion-color-base: var(--ion-color-elmo-black);
+  --ion-color-base-rgb: var(--ion-color-elmo-black-rgb);
+  --ion-color-contrast: var(--ion-color-elmo-black-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-elmo-black-contrast-rgb);
+  --ion-color-shade: var(--ion-color-elmo-black-shade);
+  --ion-color-tint: var(--ion-color-elmo-black-tint);
+}
+
+// ELMO PURE BLACK
+.ion-color-elmo-pure-black {
+	--ion-color-base: var(--ion-color-elmo-pure-black);
+	--ion-color-base-rgb: var(--ion-color-elmo-pure-black-rgb);
+	--ion-color-contrast: var(--ion-color-elmo-pure-black-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-elmo-pure-black-contrast-rgb);
+	--ion-color-shade: var(--ion-color-elmo-pure-black-shade);
+	--ion-color-tint: var(--ion-color-elmo-pure-black-tint);
+}
+
+// ELMO WHITE
+.ion-color-elmo-white {
+  --ion-color-base: var(--ion-color-elmo-white);
+  --ion-color-base-rgb: var(--ion-color-elmo-white-rgb);
+  --ion-color-contrast: var(--ion-color-elmo-white-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-elmo-white-contrast-rgb);
+  --ion-color-shade: var(--ion-color-elmo-white-shade);
+  --ion-color-tint: var(--ion-color-elmo-white-tint);
+}
+
+// ELMO BLUE
+.ion-color-elmo-blue {
+  --ion-color-base: var(--ion-color-elmo-blue);
+  --ion-color-base-rgb: var(--ion-color-elmo-blue-rgb);
+  --ion-color-contrast: var(--ion-color-elmo-blue-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-elmo-blue-contrast-rgb);
+  --ion-color-shade: var(--ion-color-elmo-blue-shade);
+  --ion-color-tint: var(--ion-color-elmo-blue-tint);
+}
+
+// ELMO BLUE LIGHT
+.ion-color-elmo-blue-light {
+  --ion-color-base: var(--ion-color-elmo-blue-light);
+  --ion-color-base-rgb: var(--ion-color-elmo-blue-light-rgb);
+  --ion-color-contrast: var(--ion-color-elmo-blue-light-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-elmo-blue-light-contrast-rgb);
+  --ion-color-shade: var(--ion-color-elmo-blue-light-shade);
+  --ion-color-tint: var(--ion-color-elmo-blue-light-tint);
+}
+
+// ELMO BLUE DARK
+.ion-color-elmo-blue-dark {
+  --ion-color-base: var(--ion-color-elmo-blue-dark);
+  --ion-color-base-rgb: var(--ion-color-elmo-blue-dark-rgb);
+  --ion-color-contrast: var(--ion-color-elmo-blue-dark-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-elmo-blue-dark-contrast-rgb);
+  --ion-color-shade: var(--ion-color-elmo-blue-dark-shade);
+  --ion-color-tint: var(--ion-color-elmo-blue-dark-tint);
+}
+
+// ELMO GRAY
+.ion-color-elmo-gray {
+  --ion-color-base: var(--ion-color-elmo-gray);
+  --ion-color-base-rgb: var(--ion-color-elmo-gray-rgb);
+  --ion-color-contrast: var(--ion-color-elmo-gray-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-elmo-gray-contrast-rgb);
+  --ion-color-shade: var(--ion-color-elmo-gray-shade);
+  --ion-color-tint: var(--ion-color-elmo-gray-tint);
+}

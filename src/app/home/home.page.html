@@ -1,20 +1,26 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content scrollY="false" color="elmo-white">
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <!-- ELMO CONTAINER AND TITLE -->
+  <div class="container">
+    <div id="logoApp" class="flex-center">
+      <img id="elmoIcon" src="../../assets/icon/elmoIcon-1024.png" alt="">  <!-- icon-->
+      <p color="elmo-black">ELMO</p>  <!-- title-->
+    </div>
+    
+    <!-- WELCOME CONTAINER -->
+    <div id="welcomeContainer">
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+      <h2 class="rubik-bold">Welcome</h2>
+      <p class="rubik-regular">Log in or create an account for free to start controlling your expenses in a totally efficient way</p>
+
+      <!-- LOGIN AND REGISTER BUTTONS -->
+      <div id="buttons">
+        <!-- LOGIN BUTTON -->
+        <ion-button id="loginButton"  shape="round" color="elmo-white" mode="ios" (click)="goLoginPage()">Login</ion-button>
+        <!-- REGISTER BUTTON -->
+        <ion-button id="registerButton"  shape="round" color="elmo-black" mode="ios" (click)="goRegisterPage()">Register</ion-button>
+      </div>
+    </div>
   </div>
+  
 </ion-content>

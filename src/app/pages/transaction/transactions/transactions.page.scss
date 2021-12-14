@@ -1,0 +1,150 @@
+// CUSTOM CSS
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+ion-content {
+
+    
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+* ::-webkit-scrollbar {
+    display: none;
+}
+
+// CHART CONTAINER
+#header {
+    background-color: #212629;
+    border-radius: 30px;
+    -webkit-box-shadow: 0px 3px 15px -16px #000000; 
+    box-shadow: 0px 3px 15px -16px #000000;
+    margin: 10px;
+    padding-bottom: 10px;
+}
+
+// TITLE
+#title {
+    
+    h1 {
+        font-family: rubik-bold;
+        font-size: 18px;
+        margin-top: 25px;
+        margin-left: -30px;
+        margin-bottom: 20px;
+        color: var(--ion-color-elmo-white);
+        width: auto;
+        max-width: 220px;
+    }
+}
+
+// TRANSACTION LIST AND ITEM
+
+#noTransactionCard {
+    -webkit-box-shadow: 0px 3px 15px -12px #000000 !important; 
+    box-shadow: 0px 3px 15px -12px #000000 !important;
+    --background: #394853 !important;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    
+}
+
+ion-list {
+    border: 0 solid transparent;
+    background-color: transparent;
+
+    ion-item-sliding {
+        border: 0 solid transparent;
+        background-color: white;
+        border-radius: 14px;
+        -webkit-box-shadow: 0px 3px 15px -12px #000000; 
+        box-shadow: 0px 3px 15px -12px #000000;
+        border: 1px solid rgba(0, 0, 0, 0.027);
+
+        ion-item-options {
+            --border-color: transparent;
+        }
+    }
+}
+
+
+// SELECT MONTH
+#selectMonth {
+    width: auto;
+    background-color: transparent;
+    border-radius: 40px;
+    border: 0;
+    justify-content: flex-end;
+
+    ion-item {
+        --background: transparent;
+        --background-activated: transparent;
+        width: min-content;
+        --color: var(--ion-color-elmo-black);
+        --border-color: transparent;
+        border-radius: 40px;
+
+        ion-select {
+            background-color: var(--ion-color-elmo-white);
+            border-radius: 40px;
+            padding: 8px 14px;
+            font-family: rubik-regular;
+            font-size: 14px;
+            border: 1px solid rgba(184, 184, 184, 0.534);
+        }
+    }
+}
+
+#horizontalScrollContainer {
+    padding-left: 26px;
+}
+ion-segment {
+    padding: 10px;
+    padding-left: 26px;
+    margin-left: -24px;
+    margin-bottom: 10px;
+}
+ion-segment-button {
+    --background: white;
+    --indicator-box-shadow: transparent!important;
+    --indicator-color : transparent!important;
+    --background-checked: #7A8BE2;
+    --color-checked: white;
+    --color: #232C33;
+    margin-right: 10px;
+    border-radius: 10px;
+    font-size: 30px;
+    min-width: 40px;
+    max-width: 40px;
+    text-align: center;
+    max-height: 40px;
+    -box-shadow: 0px 0px 3px  rgba(0,0,0,0.6);
+    -moz-box-shadow: 0px 0px 3px  rgba(0,0,0,0.6);
+    -webkit-box-shadow: 0px 1px 3px  rgba(0,0,0,0.6);
+    -o-box-shadow: 0px 0px 3px  rgba(0,0,0,0.6);
+
+    p {
+        margin: 0;
+        padding-bottom: 14px;
+        font-size: 18px;
+        font-family: rubik-regular;
+    }
+}
+
+#expenses {
+    background-color: #e0e0e0;
+    height: min-content;
+    margin: 10px;
+    border-radius: 30px;
+    min-height: 300px;
+}
+
+
+
+

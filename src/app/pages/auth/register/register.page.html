@@ -1,0 +1,39 @@
+<ion-content color="elmo-black">
+  <div class="container">
+
+    <!-- REGISTER AND BACK BUTTON -->
+    <div class="padding-horizontal-custom">
+
+      <!-- BACK BUTTON -->
+      <ion-buttons slot="start" class="ion-margin-top">
+        <ion-back-button defaultHref="welcome" color="elmo-gray" mode="md"></ion-back-button>
+      </ion-buttons>
+
+      <!-- TITLE -->
+      <div id="registerTitle" class="ion-padding-horizontal">
+        <h2>Join us</h2>
+        <p class="ion-margin-end">We are glad that you want to join us, we always try to improve our application to achieve extraordinary management</p>
+      </div>
+    </div>
+    
+    <!-- REGISTER INPUTS -->
+    <div id="registerContainer" class="ion-padding-custom">
+      <h4 class="ion-text-center">Register</h4>
+      <div>
+        <!-- USERNAME -->
+        <ion-input [(ngModel)]="username" type="text" placeholder="Username" clearInput inputmode="text" mode="ios" class="ion-margin-vertical"></ion-input>
+        <!-- EMAIL -->
+        <ion-input [(ngModel)]="email" type="email" placeholder="Email" clearInput inputmode="email" mode="ios" class="ion-margin-vertical"></ion-input>
+        <!-- PASSOWORD -->
+        <ion-input [(ngModel)]="pass" type="password" placeholder="Password" clearInput inputmode="password" mode="ios" class="ion-margin-bottom"></ion-input>
+        
+        <!-- REPEAT PASSWORD -->
+        <ion-input [(ngModel)]="cfrmpass" type="password" placeholder="Repeat password" clearInput inputmode="password" mode="ios" class="ion-margin-bottom"></ion-input>
+        
+      </div>
+      <!-- REGISTER BUTTON -->
+      <ion-button (click)="checkRegister()" id="registerButton" expand="block" shape="round" color="elmo-black" mode="ios">Register</ion-button>
+    </div>
+
+  </div>
+</ion-content>

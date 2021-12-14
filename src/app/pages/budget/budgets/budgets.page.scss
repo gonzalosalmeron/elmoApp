@@ -1,0 +1,134 @@
+// CUSTOM CSS
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+ion-content {
+    overflow: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+* ::-webkit-scrollbar {
+    display: none;
+}
+
+// TITLE
+#title {
+    h1 {
+        font-family: rubik-bold;
+        font-size: 20px;
+        margin-top: 5px;
+        margin-bottom: 0;
+        color: #232C33;
+    }
+
+    p {
+        font-family: rubik-medium;
+        color: var(--ion-color-medium);
+        font-size: 14px;
+        margin-bottom: 0
+    }
+}
+// BUDGETS BOX
+#budgetsContainer {
+    border-radius: 30px 30px 0 0;
+    margin-top: 20px;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    -webkit-box-shadow: 0px 4px 13px 3px rgba(0,0,0,0.27); 
+    box-shadow: 0px 4px 13px -1px rgba(0,0,0,0.27);
+}
+// TRANSACTION LIST AND ITEM
+
+ion-list {
+    border: 0 solid transparent;
+    background-color: transparent;
+
+    ion-item-sliding {
+        border: 0 solid transparent;
+        background-color: var(--ion-color-elmo-white);
+        border-radius: 14px;
+    }
+}
+
+ion-item {
+    --background: var(--ion-color-elmo-white);
+    --border-color: transparent;
+    --color: var(--ion-color-elmo-black);
+    border-radius: 14px;
+
+    div {
+        width: 100%;
+    }
+    ion-avatar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        background-color: var(--ion-color-elmo-purple-shade);
+        color: var(--ion-color-elmo-white);
+        margin-right: 15px;
+        --border-radius: 10px
+    }
+
+    ion-label {
+        
+        h3 {
+            font-family: rubik-bold;
+            font-size: 16px;
+        }
+
+        p {
+            font-family: rubik-medium;
+            color: var(--ion-color-elmo-gray);
+        }
+    }
+}
+
+ion-progress-bar {
+    width: 100%;
+}
+
+
+#transactionAmountMoney > h4 {
+    max-width: 55px;
+}
+
+// ADD BUTTON
+.add {
+    background-color: var(--ion-color-elmo-black);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    position: fixed;
+    bottom: 26px;
+    right: 26px;
+    z-index: 99;
+
+    .line {
+        background-color: var(--ion-color-elmo-white);
+        width: 6px;
+        height: 25px;
+        border-radius: 10px;
+        position: absolute;
+    }
+
+    .line2 {
+        background-color: var(--ion-color-elmo-white);
+        width: 6px;
+        height: 25px;
+        border-radius: 10px;
+        position: absolute;
+        transform: rotate(90deg);
+    }
+}

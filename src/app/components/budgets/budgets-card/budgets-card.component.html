@@ -1,0 +1,21 @@
+<ion-item>
+  <div class="flex-col">
+    <div class="flex-start-center ion-margin-top">
+      <!-- ICON -->
+      <ion-avatar slot="start">
+        <ion-icon name="{{ icon }}"></ion-icon>
+      </ion-avatar>
+
+      <!-- INFO -->
+      <ion-label>
+        <h3>{{ title }}</h3>
+        <p>{{amount}}€ of {{fullAmount}}€</p>
+      </ion-label>
+    </div>
+    <div class="ion-margin-vertical">
+      <ion-progress-bar *ngIf="( amount * 100)/fullAmount < 100" value="0.{{( amount * 100)/fullAmount}}" color="tertiary"></ion-progress-bar>
+      <ion-progress-bar *ngIf="( amount * 100)/fullAmount == 100" value="{{( amount * 100)/fullAmount}}" color="tertiary"></ion-progress-bar>
+    </div>
+    
+  </div>
+</ion-item>

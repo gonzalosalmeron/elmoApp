@@ -1,0 +1,47 @@
+<ion-content color="elmo-white"  [fullscreen]="true">
+  <div class="container">
+    <div>
+      <!-- BACK BUTTON -->
+      <ion-buttons slot="start" class="p-h-10 ion-margin-top">
+        <ion-back-button defaultHref="homepage" color="elmo-gray" mode="md"></ion-back-button>
+      </ion-buttons>
+
+      <!-- TITLE -->
+      <div id="title" class="p-h-26">
+        <h1>
+          Calculate the price of your trip
+        </h1>
+        <p>
+          This way you can calculate the cost of your travels
+        </p>
+      </div >
+
+      <!-- INPUTS -->
+      <div id="inputBox" class="p-h-26">
+        <ion-item mode="ios" class="ion-margin-bottom">
+          <ion-label position="stacked">Distance traveled</ion-label>
+          <ion-input (keyup)="calcPrice(distance, fuelConsuption, fuelPrice)"  [(ngModel)]="distance" type="number" placeholder="Distance in km"></ion-input>
+        </ion-item>
+
+        <ion-item mode="ios" class="ion-margin-bottom">
+          <ion-label position="stacked">Fuel consumption</ion-label>
+          <ion-input (keyup)="calcPrice(distance, fuelConsuption, fuelPrice)"  [(ngModel)]="fuelConsuption" type="number" placeholder="Consumption per 100km"></ion-input>
+        </ion-item>
+
+        <ion-item mode="ios" class="ion-margin-bottom">
+          <ion-label position="stacked">Fuel price</ion-label>
+          <ion-input (keyup)="calcPrice(distance, fuelConsuption, fuelPrice)"  [(ngModel)]="fuelPrice" type="number" placeholder="Price in €"></ion-input>
+        </ion-item>
+      </div>
+      
+    </div>
+
+    <div id="footer" class="flex-between-center">
+      <div><h1 >{{price}} <span>€</span></h1></div>
+      <ion-button id="resetButton" (click)="resetInputs()" shape="round" color="elmo-blue-dark">
+        <ion-icon name="reload-outline"></ion-icon>
+      </ion-button>
+    </div>
+  </div>
+
+</ion-content>

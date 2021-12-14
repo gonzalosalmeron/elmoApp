@@ -1,0 +1,163 @@
+// CUSTOM CSS
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+
+// HIDE SCROLL BAR
+ion-content {
+    --overflow: hidden;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+* ::-webkit-scrollbar {
+    display: none;
+}
+
+
+// EDIT BUDGET
+
+#editBudget {
+
+    h1 {
+        font-family: rubik-bold;
+        font-size: 22px;
+        margin-top: 5px;
+        margin-bottom: 0;
+        color: var(--ion-color-elmo-black);
+    }
+
+}
+
+
+// HORIZONTAL SCROLL
+
+#horizontalScrollContainer {
+    padding-left: 26px;
+}
+
+ion-segment-button {
+    --background: var(--ion-color-elmo-blue);
+    --indicator-box-shadow: transparent!important;
+    --indicator-color : #608b9e;
+    --background-checked: #608b9e;
+    margin-right: 10px;
+    color: #232C33;
+    border-radius: 10px;
+    padding-bottom: 4px;
+    font-size: 30px;
+}
+
+
+// SET BUDGET TITLE
+#setBudgetTitle {
+    margin-top: 30px;
+
+    ion-input {
+        font-family: rubik-medium;
+        --color: #858585;
+    }
+}
+
+
+// SET BUDGET AMOUNT
+
+#setBudgetAmountBox {
+    margin-top: 20px;
+    background-color: white;
+    padding: 10px 26px;
+
+    
+}
+
+#inputBudgetAmountBox {
+    ion-input {
+        font-family: rubik-bold;
+        color: #232C33;
+        font-size: 28px;
+        width: 90px;
+        
+    }
+
+    span {
+        font-family: rubik-bold;
+        color: #9B9B9B;
+        font-size: 30px;
+    }
+}
+
+// WALLET BUTTON
+
+#wallet {
+    background-color: var(--ion-color-elmo-white);
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 100%;
+}
+
+
+// MODIFY BUDGET AMOUNT TEXT
+#modifyBudgetAmount {
+    background-color: #A0C1D1;
+    border-radius: 30px 0 0 0;
+
+    ion-item {
+        --background: #A0C1D1;
+        --border-color: transparent;
+        --border-radius: 30px 0 0 0;
+    }
+}
+
+#amountSuggestion {
+    width: 160px;
+    height: 90px;
+
+    h4 {
+        color: #232C33;
+        font-family: rubik-bold;
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+
+    h5 {
+        color: #232C33;
+        font-family: rubik-medium;
+        font-size: 14px;
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+}
+
+
+#modifyBudgetAmount > div {
+
+    ion-button {
+        padding: 0;
+        --border-radius: 15px;
+    }
+
+    ion-button:active {
+        transform: translateY(4px);
+    }
+
+} 
+
+#saveBudget {
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    margin: 0;
+}

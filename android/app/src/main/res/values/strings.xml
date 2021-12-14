@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">elmoApp</string>
+    <string name="title_activity_main">elmoApp</string>
+    <string name="package_name">io.ionic.elmoapp</string>
+    <string name="custom_url_scheme">io.ionic.elmoapp</string>
+</resources>

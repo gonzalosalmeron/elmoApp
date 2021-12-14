@@ -1,0 +1,37 @@
+ion-item {
+    --background: var(--ion-color-elmo-white);
+    --border-color: transparent;
+    --color: var(--ion-color-elmo-black);
+    border-radius: 14px;
+
+    div {
+        width: 100%;
+    }
+    ion-avatar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        background-color: var(--ion-color-elmo-purple-shade);
+        color: var(--ion-color-elmo-white);
+        margin-right: 15px;
+        --border-radius: 10px
+    }
+
+    ion-label {
+        
+        h3 {
+            font-family: rubik-bold;
+            font-size: 16px;
+        }
+
+        p {
+            font-family: rubik-medium;
+            color: var(--ion-color-elmo-gray);
+        }
+    }
+}
+
+ion-progress-bar {
+    width: 100%;
+}

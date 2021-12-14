@@ -1,0 +1,41 @@
+<ion-content color="elmo-white">
+  <div class="container">
+
+    <!-- LOGIN TITLE AND BACK BUTTON -->
+    <div class="padding-horizontal-custom">
+
+      <!-- BACK BUTTON -->
+      <ion-buttons slot="start" class="ion-margin-top">
+        <ion-back-button defaultHref="welcome" (click)="goWelcome()" color="elmo-gray" mode="md"></ion-back-button>
+      </ion-buttons>
+
+      <!-- TITLE -->
+      <div id="loginTitle" class="ion-padding-horizontal ion-padding-top">
+        <h2>Login</h2>
+        <p class="ion-margin-end">We are glad that you are back,<br> we always try to improve our <br> application for extraordinary <br> management</p>
+      </div>
+    </div>
+    
+    <!-- LOGIN INPUTS -->
+    <div id="loginContainer" class="ion-padding-custom">
+      <h4 class="ion-text-center">Login</h4>
+      <div>
+        <!-- EMAIL -->
+        <ion-input [(ngModel)]="email" type="email" placeholder="Email" expand="block" clearInput inputmode="email" mode="ios" class="ion-margin-vertical"></ion-input>
+        <!-- PASSWORD -->
+        <ion-input [(ngModel)]="password" type="password" placeholder="Password" clearInput inputmode="password" mode="ios" class="ion-margin-bottom"></ion-input>
+        <!-- REMEMBER PASSWORD CHECKBOX -->
+        <div class="checkbox">
+          <ion-checkbox mode="md" color="elmo-blue-dark"></ion-checkbox>
+          <p>Remember me</p>
+        </div>
+        
+        <!-- remember password -->
+        <p>Remember password?</p>
+      </div>
+      <!-- login button -->
+      <ion-button (click)="checkLogin()" id="loginButton" expand="block"  shape="round" color="elmo-white" mode="ios">Login</ion-button>
+    </div>
+
+  </div>
+</ion-content>

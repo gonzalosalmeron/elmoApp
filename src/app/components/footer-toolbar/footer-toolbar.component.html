@@ -1,0 +1,32 @@
+<ion-toolbar color="elmo-black">
+  <ion-grid fixed>
+    <ion-row class="ion-text-center ion-align-items-center toolbar-elements-padding">
+
+      <!-- NOTES BUTTON -->
+      <ion-col class="col1">
+        <ion-icon  name="document-text-outline" (click)="onDevelopmentToast()"></ion-icon>
+      </ion-col>
+
+      <!-- TRANSACTIONS PAGE BUTTON -->
+      <ion-col class="col2">
+        <ion-icon name="bar-chart-outline" (click)="goViewTransactions()"></ion-icon>
+      </ion-col>
+
+      <!-- ADD TRANSACTIONS BUTTON -->
+      <ion-col class="col3">
+        <app-add-button (click)="openDepositModal()"></app-add-button>
+      </ion-col>
+
+      <!-- BUDGETS PAGE BUTTON -->
+      <ion-col class="col4">
+        <ion-icon name="albums-outline" (click)="goViewBudgets()"></ion-icon>
+      </ion-col>
+
+      <!-- TRAVEL COST BUTTON -->
+      <ion-col class="col5">
+        <ion-icon name="car-outline" (click)="goCarFuel()"></ion-icon>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+</ion-toolbar>

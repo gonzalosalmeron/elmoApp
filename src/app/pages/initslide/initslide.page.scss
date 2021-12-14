@@ -1,0 +1,76 @@
+:root{ --swiper-theme-color: var(--ion-color-elmo-black); }
+
+.swiper {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--ion-color-elmo-white);
+}
+  
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.swiperslide img {
+    display: block;
+    width: 200px;
+}
+
+#imageBox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+ion-img {
+    width: 160px;
+}
+
+#slide1svg {
+    width: 86px;
+}
+
+#slide1-2svg {
+    width: 62px;
+    margin-left: 40px;
+}
+
+#slide2svg {
+    width: 180px;
+}
+
+#slide3svg {
+    width: 200px;
+}
+
+#titleText {
+    h1 {
+        font-family: rubik-bold;
+        font-size: 25px;
+        color: var(--ion-color-elmo-black);
+    }
+}
+
+.textContainer {
+
+    h1 {
+        font-family: rubik-bold;
+        font-size: 20px;
+        color: var(--ion-color-elmo-black);
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+
+    h3 {
+        margin-top: 10px;
+        font-family: rubik-medium;
+        font-size: 16px;
+        color: var(--ion-color-elmo-black);
+    }
+}
+

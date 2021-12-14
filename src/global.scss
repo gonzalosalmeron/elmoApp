@@ -24,3 +24,104 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+// import Swiper and modules styles
+@import 'swiper/scss';
+@import 'swiper/scss/effect-flip';
+@import 'swiper/scss/navigation';
+@import 'swiper/scss/pagination';
+
+
+// FONT NOTOSANS
+@font-face {
+    font-family: 'notoSans';
+    src: url(/./assets/fonts/NotoSans-Regular.ttf);
+}
+
+// FONT RUBIK REGULAR
+@font-face {
+    font-family: 'rubik-regular';
+    src: url(./assets/fonts/Rubik-Regular.ttf);
+}
+
+// FONT RUBIK MEDIUM
+@font-face {
+    font-family: 'rubik-medium';
+    src: url(./assets/fonts/Rubik-Medium.ttf);
+}
+
+// FONT RUBIK BOLD
+@font-face {
+    font-family: 'rubik-bold';
+    src: url(./assets/fonts/Rubik-Bold.ttf);
+}
+
+// GLOBAL CSS CLASSES
+.nostoSans {
+    font-family: 'notoSans';
+}
+
+.rubik-regular {
+    font-family: 'rubik-regular';
+}
+
+.rubik-medium {
+    font-family: 'rubik-medium';
+}
+
+.rubik-bold {
+    font-family: 'rubik-bold';
+}
+
+.p-h-10 {
+    padding: 0 10px;
+}
+
+.p-h-26 {
+    padding: 0 26px;
+}
+
+.p-0 {
+    padding: 0;
+}
+
+.p-b-20 {
+    padding-bottom: 20px;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-col-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flex-start-center {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-between-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

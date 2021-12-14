@@ -1,0 +1,30 @@
+// CUSTOM CARD CSS 
+
+ion-item {
+    --background: white;
+    --border-color: transparent;
+    --color: #232C33;
+    border-radius: 14px;
+    border: 1px solid rgba(0, 0, 0, 0.027);
+
+    ion-avatar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        background-color: var(--ion-color-elmo-pure-black);
+        color: white;
+        margin-right: 15px;
+        --border-radius: 10px;
+    }
+
+    #infoTransaction {
+        color: var(--ion-color-elmo-black);
+        font-family: rubik-medium;
+    }
+
+    #moneyTransaction {
+        color: var(--ion-color-elmo-black);
+        font-family: rubik-medium;
+    }
+}

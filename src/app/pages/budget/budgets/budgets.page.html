@@ -1,0 +1,49 @@
+<ion-content color="elmo-white" class="padding-horizontal-custom" [fullscreen]="true">
+  <div class="container">
+
+    <!-- BACK BUTTOM -->
+    <ion-buttons slot="start" class="p-h-10 ion-margin-top">
+      <ion-back-button mode="md" color="elmo-gray" defaultHref="homepage"></ion-back-button>
+    </ion-buttons>
+
+    <!-- TITLE -->
+    <div id="title" class="p-h-26">
+      <h1>Here are your <br>budgets</h1>
+      <p>Control your expenses</p>
+    </div>
+
+    <!-- BUDGETS CONTAINER -->
+    <div id="budgetsContainer" class="p-h-26">
+      <ion-list mode="ios" class="ion-margin-top">
+
+        <!-- EMPTY CARD ONLY DISPLAYED WHEN NO BUDGETS FOUND -->
+        <app-no-budgets-card *ngIf="budgets.length < 1"></app-no-budgets-card>
+
+        <ion-item-sliding class="ion-margin-bottom" *ngFor="let budget of budgetsService.getBudgets() | async" >
+
+          <!-- BUDGET CARD -->
+          <app-budgets-card class="background-change" [icon]="budget.icon" [title]="budget.title" [amount]="budget.amount" [fullAmount]="budget.fullAmount"></app-budgets-card>
+          
+          <!-- SLIDING OPTIONS -->
+          <ion-item-options side="start">
+            <!-- EDIT -->
+            <ion-item-option color="elmo-blue" (click)="goEditBudget(budget.id)">
+              <ion-icon name="create-outline"></ion-icon>
+            </ion-item-option>
+            <!-- DELELE -->
+            <ion-item-option color="elmo-blue-dark" (click)="callDeleteBudget(budget)">
+              <ion-icon name="trash-outline"></ion-icon>
+            </ion-item-option>
+
+          </ion-item-options>
+          
+        </ion-item-sliding>
+        
+      </ion-list>
+    </div>
+
+    <!-- go edit transaction button -->
+    <app-add-button-black (click)="goEditBudget(undefined)"></app-add-button-black>
+    
+  </div>
+</ion-content>

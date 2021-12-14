@@ -1,0 +1,59 @@
+<ion-content [fullscreen]="true">
+  <swiper #swiper [config]="config">
+
+    <!-- SLIDE 0 -->
+    <ng-template swiperSlide>
+      <div>
+        <div id="imageBox">
+          <ion-img class="img" src="../../../assets/icon/elmoIcon-1024.png"></ion-img>
+        </div>
+        <div id="titleText" class="p-h-26">
+          <h1>ELMO</h1>
+        </div>
+      </div>
+    </ng-template>
+
+    <!-- SLIDE 1 -->
+    <ng-template swiperSlide>
+      <div>
+        <div id="imageBox">
+          <ion-img id="slide1svg" class="img" src="../../../assets/images/slide1.svg" ></ion-img>
+          <ion-img id="slide1-2svg" class="img" src="../../../assets/images/slide1-2.svg"></ion-img>
+        </div>
+        <div class="p-h-26 textContainer ion-margin-top">
+          <h1>What allows you?</h1>
+          <h3>Elmo is a wallet management application that allows you to manage your money by creating budgets and tracking your movements.</h3>
+        </div>
+      </div>
+    </ng-template>
+
+    <!-- SLIDE 2 -->
+    <ng-template swiperSlide>
+      <div>
+        <div id="imageBox">
+          <ion-img id="slide2svg" class="img" src="../../../assets/images/slide2.svg"></ion-img>
+        </div>
+        <div class="p-h-26 textContainer">
+          <h1>How does it work?</h1>
+          <h3>Each time you make a money movement, you can select its type to be subtracted from your budgets.</h3>
+        </div>
+      </div>
+    </ng-template>
+
+    <!-- SLIDE 3 -->
+    <ng-template swiperSlide>
+      <div>
+        <div id="imageBox">
+          <ion-img id="slide3svg" class="img" src="../../../assets/images/slide3.svg"></ion-img>
+        </div>
+        <div class="p-h-26 textContainer">
+          <h1>Ready?</h1>
+          <ion-button (click)="goWelcomePage()" color="elmo-black" shape="round" class="ion-margin-top">
+            <ion-icon name="arrow-forward"></ion-icon>
+          </ion-button>
+        </div>
+      </div>
+    </ng-template>
+
+  </swiper>
+</ion-content>

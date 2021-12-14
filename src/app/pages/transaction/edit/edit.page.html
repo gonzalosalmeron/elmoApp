@@ -1,0 +1,75 @@
+<ion-content class="padding-horizontal-custom" [fullscreen]="true">
+  <div class="container">
+    <div>
+
+      <!-- BACK BUTTON -->
+      <ion-buttons slot="start" class="ion-margin-top p-h-10">
+        <ion-back-button mode="md" color="elmo-gray" defaultHref="homepage"></ion-back-button>
+      </ion-buttons>
+
+      <!-- TITLE -->
+      <div id="title" class="p-h-26">
+        <h1>Create a new amount</h1>
+        <p>We recommend that you control your expenses and be responsible with your purchases.</p>
+      </div>
+
+      
+    </div>
+
+    <div id="inputBox" class="p-h-26">
+      <div>
+
+        <!-- TOPIC -->
+        <ion-item mode="md">
+          <ion-label color="elmo-black" position="stacked">Topic</ion-label>
+          <ion-input [(ngModel)]="transaction.topic" mode="ios"></ion-input>
+        </ion-item>
+
+        <!-- DATE -->
+        <ion-item mode="md">
+          <ion-label color="elmo-black" position="stacked">Date</ion-label>
+          <ion-datetime displayFormat="DD MMM, YYYY" placeholder="Select Date" [(ngModel)]="transaction.date" mode="ios"></ion-datetime>
+        </ion-item>
+
+        <!-- DESCRIPTION -->
+        <ion-item mode="md">
+          <ion-label color="elmo-black" position="stacked">Description</ion-label>
+          <ion-textarea rows="1" [(ngModel)]="transaction.description"></ion-textarea>
+        </ion-item>
+
+        <!-- AMOUNT -->
+        <ion-item mode="md">
+          <ion-label color="elmo-black" position="stacked">Amount</ion-label>
+          <ion-input type="number" [(ngModel)]="transaction.amount" *ngIf="transaction.id == undefined">-&nbsp;</ion-input>
+          <ion-input type="number" [(ngModel)]="transaction.amount" *ngIf="transaction.id != undefined"  placeholder="{{-transactionAmountEdit}}">-&nbsp;</ion-input>
+        </ion-item>
+        <p id="moneyLow" *ngIf="this.balance - this.transaction.amount < 0" >*** Your account is in negative</p>
+
+        <!-- CATEGORY -->
+        <p id="category">Category</p>
+        <p>
+          <ion-chip color="elmo-black" [ngStyle]="{'background': transaction.type == 'Other' ? '#acacaca8' : 'white'}" mode="ios" outline="true" (click)="setTransactionCategory('Other', 'sparkles-outline', undefined)">
+            <ion-label>Other</ion-label>
+          </ion-chip>
+
+          <ion-chip color="elmo-black" [ngStyle]="{'background': transaction.type == 'Food' ? '#acacaca8' : 'white'}" mode="ios" outline="true" (click)="setTransactionCategory('Food', 'fast-food-outline', undefined)">
+            <ion-label>Food</ion-label>
+          </ion-chip>
+
+          <ion-chip color="elmo-black" [ngStyle]="{'background': transaction.budgetId == budget.id ? '#acacaca8' : 'white'}" mode="ios" outline="true" *ngFor="let budget of budgetsService.getBudgets() | async" (click)="setTransactionCategory(budget.title, budget.icon, budget.id)">
+            <ion-label>{{budget.title}}</ion-label>
+          </ion-chip>
+        </p>
+        
+
+        <ion-button color="elmo-pure-black" mode="ios" expand="block" (click)="callSaveTransaction()">
+          Save
+        </ion-button>
+        
+
+      </div>
+    </div>
+    
+
+  </div>
+</ion-content>

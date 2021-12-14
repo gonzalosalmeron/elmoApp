@@ -1,0 +1,88 @@
+<ion-content color="elmo-white" class="padding-horizontal-custom" [fullscreen]="true">
+  <div class="container">
+    <div>
+      <!-- back button -->
+      <div class="p-h-10">
+        <ion-buttons slot="start" class="ion-margin-top">
+          <ion-back-button mode="md" defaultHref="homepage" color="elmo-gray"></ion-back-button>
+        </ion-buttons>
+      </div>
+      <!-- title -->
+      <div class="p-h-26">
+        <div id="editBudget">
+          <h1>Set your<br>monthly<br> budget goal</h1>
+        </div>
+      </div>
+    </div>
+
+    <div>
+
+      <!-- horizontal scroll -->
+      <div id="horizontalScrollContainer" class="ion-margin-top">
+        <ion-grid fixed class="p-0 ion-margin-top" >
+          <ion-row>
+            <ion-col class="p-0">
+    
+              <!-- monthly goals -->
+              <ion-segment scrollable="true" mode="md" [(ngModel)]="budget.icon">
+                
+                <ion-segment-button mode="ios" class="ion-text-center" value="{{icon}}" *ngFor="let icon of icons">
+                  <div>
+                    <ion-icon name="{{icon}}"></ion-icon>
+                  </div>
+                </ion-segment-button>
+    
+              </ion-segment>
+            </ion-col>
+    
+          </ion-row>
+        </ion-grid>
+      </div>
+
+      <!-- set budget title -->
+      <div id="setBudgetTitle" class="p-h-26">
+          <ion-input type="text" placeholder="Budget title" class="ion-no-padding ion-margin-top" [(ngModel)]="budget.title"></ion-input>
+      </div>
+      
+
+      <!-- set budget amount -->
+      <div id="setBudgetAmountBox" class="flex-between-center">
+          <div id="inputBudgetAmountBox" class="flex-start-center">
+            <ion-input min="0" type="number" [(ngModel)]="budget.amount"></ion-input>
+            <span role="textbox"> €</span>
+          </div>
+
+          <!-- check balance -->
+          <div id="wallet" class="flex-between-center" (click)="balancePopover($event)">
+            <ion-icon slot="end" name="wallet" color="elmo-gray"></ion-icon>
+          </div>
+
+      </div>
+
+      <!-- edit budget amount -->
+      <div id="modifyBudgetAmount">
+
+        <!-- ion range for edit budget amount -->
+        <ion-item>
+          <ion-range mode="ios" min="0" max="3500" step="5" [(ngModel)]="budget.amount" color="elmo-black" (ionChange)="changeAmountDescription()">
+          </ion-range>
+        </ion-item>
+        
+        <!-- variable text depending of budget amount -->
+        <div class="flex-between p-b-20 p-h-26">
+          <div id="amountSuggestion">
+            <h4>{{amountTitle}}</h4>
+            <h5>{{amountDescription}}</h5>
+          </div>
+
+          <!-- save budget button -->
+          <ion-button id="saveBudget" color="elmo-white" mode="ios" (click)="callSaveBudget()">
+            Save
+          </ion-button>
+        </div>
+        
+      </div>
+    </div>
+
+  </div>
+</ion-content>
