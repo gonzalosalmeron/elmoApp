@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="media/elmoLogo.png" width="200" >
+  <img src="media/elmoLogo.png" width="100" >
   <h3 align="center" margin-top="-40">ELMO</h3>
 </p>
 
