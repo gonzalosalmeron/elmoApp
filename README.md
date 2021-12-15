@@ -8,7 +8,7 @@
 
 ## 👀 Qué es Elmo?
 Elmo es una aplicación de gestión de cartera que te permite administrar tu dinero creando objetivos de gasto y haciendo un seguimiento de tus movimientos. <br> Además incluye una herramienta la cual te permitirá calcular el coste de los trayectos que hagas en tu vehículo y un apartado donde podrás crear notas para poder gestionar mejor tu día a día.
-###### (Este ultimo apartado está en desarrollo) <a href="https://youtu.be/W98SmA-GSCA">Ver video</a>
+###### (Este ultimo apartado está en desarrollo) <a href="https://youtu.be/ZZqmKjBDXOU">Ver video</a>
 
 ------
 
